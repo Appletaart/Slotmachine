@@ -165,7 +165,7 @@
     var randomIndex = 0; // เก็บค่าอินเด็กซ์
     var stop;
     var newStart;
-    var isClicked = false; เอาไปใช้ที่ปุ่มกด
+    var isClicked = false; //เอาไปใช้ที่ปุ่มกด
 
     //random image
     function hitSlot() {
@@ -196,14 +196,14 @@
         window.clearTimeout(stop);
         var username = document.getElementById("username").value;
         if (indexes[0] == indexes[1] && indexes[1] == indexes[2]) { //เงื่อนไขเท่ากันทั้ง 3 slot
-            if (indexes[0] === jackpot) { // ถ้า slot แรก เท่ากับ === ต้องเป็นรูปหมา จะชนะแจ็คพ๊อต ถ้าไม่ก็ชนะธรรมดา
-                document.getElementById("welcome").innerHTML = ('HEY!!, VERY LUCKY DAY ' + username + ', YOU WIN! JACKPOT');
+            if (slotPic[indexes[0]] === jackpot) { // ถ้า slot แรก เท่ากับ === ต้องเป็นรูปหมา จะชนะแจ็คพ๊อต ถ้าไม่ก็ชนะธรรมดา
+                document.getElementById("welcome").innerHTML = ('VERY LUCKY DAY ' + username + ', YOU WIN! JACKPOT');
             } else {
                 document.getElementById("welcome").innerHTML = ('HEY!!, LUCKY DAY ' + username + ', U WIN!');
             }
         }
         else {
-            document.getElementById("welcome").innerHTML = ('Hey, Unlucky ' + username + ', You lose');
+            document.getElementById("welcome").innerHTML = ('Hey, Unlucky ' + username + ', You lose!');
         }
         isClicked = false; //ถ้าไม่ใส่บรรทัดนี้ จะรัน hitslot ไม่ได้อีกเพราะเป็น true คือรันแล้ว
     }
