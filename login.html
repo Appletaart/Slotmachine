@@ -21,6 +21,7 @@
         .bar {
             width: auto;
             height: auto;
+            position: relative;
             border-radius: 35%;
             margin: 0 100px;
             box-shadow: 5px 5px 150px #550402;
@@ -29,6 +30,7 @@
         .bar1{
             width: auto;
             height: auto;
+            position: relative;
             border-radius: 35%;
             margin: 0 100px;
             box-shadow: 5px 5px 150px #550402;
@@ -100,7 +102,7 @@
             height: 30px;
             background-color: green;
             position: absolute;
-            top: 25%;
+            top: 1%;
             left: 50%;
         }
         p{
@@ -113,8 +115,9 @@
 
 <body onload="mainlogin();">
 <div class="container">
-    <div class="green"></div>
+
     <div class="bar" id="main">
+        <div class="green"></div>
         <div class="mg100">
             <p>Gelieve uw naam in te vullen</p>
             <input type="text" id="username" value="" placeholder="Say your name" required><br>
@@ -123,6 +126,7 @@
         </div>
     </div>
     <div class="bar1" id="qn">
+        <div class="green"></div>
         <div class="mg100">
             <h2 id="welcome"></h2>
             <!-- <h2 id="winorlose"></h2><br> -->
